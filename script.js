@@ -2,7 +2,7 @@ function encrypt() {
     let text = document.getElementById('text').value;
     let key = document.getElementById('key').value;
 
-    vinegere = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
+    alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
     let s = 0;
 
     keyTrim = key.trim();
@@ -22,8 +22,8 @@ function encrypt() {
                         return v;
                     } else {
                         i = (i - s) % keyTrim.length;
-                        encryp = ((vinegere.indexOf(v) + vinegere.indexOf(keyTrim[i])) % 26);
-                        return result = vinegere[encryp];
+                        encryp = ((alphabet.indexOf(v) + alphabet.indexOf(keyTrim[i])) % 26);
+                        return result = alphabet[encryp];
                     }
                 })
                 .join('')
@@ -36,7 +36,7 @@ function decrypt() {
     let text = document.getElementById('text').value;
     let key = document.getElementById('key').value;
 
-    vinegere = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
+    alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
     let s = 0;
 
     keyTrim = key.trim();
@@ -56,8 +56,8 @@ function decrypt() {
                         return v;
                     } else {
                         i = (i - s) % keyTrim.length;
-                        decryp = ((vinegere.indexOf(v) - vinegere.indexOf(keyTrim[i]) + 26 % 26);
-                        return result = vinegere[decryp];
+                        decryp = ((alphabet.indexOf(v) - alphabet.indexOf(keyTrim[i]) + 26 % 26));
+                        return result = alphabet[decryp];
                     }
                 })
                 .join('')
