@@ -1,4 +1,4 @@
-function encrypt(convert_type) {
+function convertText(convert_type) {
     let text = document.getElementById('text').value;
     let key = document.getElementById('key').value;
 
